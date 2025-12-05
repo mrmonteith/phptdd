@@ -57,13 +57,13 @@ class DiscountCalculator
 ## Step 3: Refactor
 
 Add input validation, improve readability, or restructure without breaking tests.
-# 📌 Summary
+## 📌 Summary
 
 TDD is not just about testing — it’s about designing software through tests. By following the Red‑Green‑Refactor cycle, developers build reliable, maintainable codebases with confidence.
-# 📚 References
 
-    Agile Alliance – What is TDD?
+## 📚 References
 
-    Wikipedia – Test-Driven Development
+- [Agile Alliance – What is TDD?](https://www.agilealliance.org/glossary/tdd/)  
+- [Wikipedia – Test-Driven Development](https://en.wikipedia.org/wiki/Test-driven_development)  
+- [GeeksforGeeks – Test-Driven Development](https://www.geeksforgeeks.org/software-engineering/test-driven-development-tdd/)
 
-    GeeksforGeeks – Test-Driven Development
