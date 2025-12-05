@@ -1,18 +1,42 @@
 <?php
+declare(strict_types=1);
+
 use PHPUnit\Framework\TestCase;
+use Mmonteith\PhpTddExample\DiscountCalculator;
 
-require_once __DIR__ . '/../src/DiscountCalculator.php';
+final class DiscountCalculatorTest extends TestCase
+{
+    public function testApplyDiscountReducesPrice(): void
+    {
+        $calc = new DiscountCalculator();
+        $result = $calc->applyDiscount(100.0, 10.0);
 
-class DiscountCalculatorTest extends TestCase {
-    public function testTenPercentDiscount(): void {
-        $calculator = new DiscountCalculator();
-        $result = $calculator->applyDiscount(100, 0.10);
-        $this->assertEquals(90, $result);
+        // Use delta for float comparison to avoid deprecation warnings
+        $this->assertEqualsWithDelta(90.0, $result, 0.0001);
     }
 
-    public function testRejectsInvalidRate(): void {
-        $this->expectException(InvalidArgumentException::class);
-        $calculator = new DiscountCalculator();
-        $calculator->applyDiscount(100, 1.5);
+    public function testZeroPercentDiscountReturnsOriginalPrice(): void
+    {
+        $calc = new DiscountCalculator();
+        $result = $calc->applyDiscount(200.0, 0.0);
+
+        $this->assertEqualsWithDelta(200.0, $result, 0.0001);
+    }
+
+    public function testFullDiscountReturnsZero(): void
+    {
+        $calc = new DiscountCalculator();
+        $result = $calc->applyDiscount(50.0, 100.0);
+
+        $this->assertEqualsWithDelta(0.0, $result, 0.0001);
+    }
+
+    public function testInvalidPercentThrowsException(): void
+    {
+        $calc = new DiscountCalculator();
+
+        $this->expectException(\InvalidArgumentException::class);
+        $calc->applyDiscount(100.0, 150.0);
     }
 }
+

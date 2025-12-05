@@ -1,0 +1,1 @@
+{"version":2,"defects":[],"times":{"DiscountCalculatorTest::testApplyDiscount":0,"DiscountCalculatorTest::testInvalidPercentThrowsException":0,"ExampleTest::testTrueIsTrue":0,"DiscountCalculatorTest::testApplyDiscountReducesPrice":0,"DiscountCalculatorTest::testZeroPercentDiscountReturnsOriginalPrice":0,"DiscountCalculatorTest::testFullDiscountReturnsZero":0}}

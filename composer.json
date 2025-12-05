@@ -1,0 +1,20 @@
+{
+    "name": "mmonteith/php-tdd-example",
+    "description": "PHP Test-Driven Development example project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mmonteith\\PhpTddExample\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mrmonteith",
+            "email": "michael_r_monteith@yahoo.com"
+        }
+    ],
+    "license": "MIT",
+    "require-dev": {
+        "phpunit/phpunit": "^12.5"
+    }
+}

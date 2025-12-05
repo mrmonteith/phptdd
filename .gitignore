@@ -1,0 +1,33 @@
+# Composer dependencies
+/vendor/
+
+# PHPUnit cache and result logs
+/.phpunit.cache/
+/phpunit.result.cache
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+
+# IDE project files
+/.idea/
+/.vscode/
+/nbproject/
+
+# Environment / credentials
+.env
+*.key
+*.pub
+*.pem
+
+# Logs
+*.log
+
+# Coverage reports
+/coverage/
+/clover.xml
+/junit.xml
+
