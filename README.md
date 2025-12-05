@@ -38,6 +38,7 @@ phptdd/
 
 This repository demonstrates Test-Driven Development (TDD) in PHP using PHPUnit.
 
+
 ## Steps
 1. Write a failing test in `tests/`.
 2. Run PHPUnit → test fails (Red).
@@ -142,3 +143,28 @@ class DiscountCalculator {
   ```bash
   vendor/bin/phpunit
   ```
+🧹 Repo Hygiene
+
+This project includes a .gitignore file at the root of the repository to keep the codebase clean and professional. The following items are intentionally excluded from version control:
+
+    /vendor/ → Composer dependencies are reproducible via composer install, so they don’t need to be committed.
+
+    PHPUnit cache files (/.phpunit.cache/, /phpunit.result.cache) → avoids noisy diffs and irrelevant artifacts.
+
+    Environment files (.env, keys, certificates) → prevents leaking credentials or secrets.
+
+    IDE/OS files (.idea/, .vscode/, .DS_Store, Thumbs.db) → keeps the repo consistent across different machines.
+
+    Coverage reports (/coverage/, clover.xml, junit.xml) → generated locally or in CI, not needed in source control.
+
+    Logs (*.log) → runtime artifacts, not source code.
+
+✅ Why This Matters
+
+    Keeps the repository lightweight and focused on source code.
+
+    Ensures reproducibility: anyone cloning the repo can run composer install to get dependencies.
+
+    Protects sensitive information from being accidentally committed.
+
+    Demonstrates professional repo hygiene to recruiters and collaborators.
