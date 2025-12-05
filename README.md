@@ -1,25 +1,36 @@
 # phptdd
-PHP Test-Driven Development Example
-
 # PHP test-driven development example
 
 This repository demonstrates Test-Driven Development (TDD) in PHP using PHPUnit. It’s designed to be recruiter-friendly, transparent, and easy to reproduce.
 
----
+⚠️ Note on PHPUnit Deprecation Warning
 
+When running the test suite with PHPUnit 12.5.0 under PHP 8.5.0, you may see:
+```
+OK, but there were issues!
+Tests: N, Assertions: N, PHPUnit Deprecations: 1.
+```
+
+```text
+This message does not indicate a problem with the project’s code or tests. It is a known upstream issue:
+PHPUnit 12.5 currently emits a deprecation notice internally when executed on PHP 8.5, even for trivial tests.
+The warning comes from PHPUnit itself, not from any deprecated assertions or practices in this repository.
+---
+```
 ## Directory structure
 
 ```text
-project-root/
-├── src/
+phptdd/
+├── README.md              # Clear setup + usage instructions
+├── composer.json          # Dependencies + autoload config
+├── composer.lock
+├── phpunit.xml            # PHPUnit configuration
+├── src/                   # Application source code
 │   └── DiscountCalculator.php
-├── tests/
-│   └── DiscountCalculatorTest.php
-├── vendor/
-│   └── (Composer dependencies)
-├── composer.json
-├── phpunit.xml
-└── README.md
+├── tests/                 # Unit tests
+│   ├── DiscountCalculatorTest.php
+│   └── ExampleTest.php
+└── vendor/                # Composer dependencies (ignored in VCS)
 ```
 
 ---
