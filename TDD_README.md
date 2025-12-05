@@ -67,3 +67,52 @@ TDD is not just about testing — it’s about designing software through tests.
 - [Wikipedia – Test-Driven Development](https://en.wikipedia.org/wiki/Test-driven_development)  
 - [GeeksforGeeks – Test-Driven Development](https://www.geeksforgeeks.org/software-engineering/test-driven-development-tdd/)
 
+## 🔄 The TDD Cycle: Red → Green → Refactor
+
+```text
+   ┌───────────────┐
+   │   Write a     │
+   │   failing     │
+   │     test      │
+   └───────┬───────┘
+           │
+           ▼
+   ┌───────────────┐
+   │   Run tests   │
+   │   → FAIL      │
+   │   (Red)       │
+   └───────┬───────┘
+           │
+           ▼
+   ┌───────────────┐
+   │   Write just  │
+   │   enough code │
+   │   to pass     │
+   └───────┬───────┘
+           │
+           ▼
+   ┌───────────────┐
+   │   Run tests   │
+   │   → PASS      │
+   │   (Green)     │
+   └───────┬───────┘
+           │
+           ▼
+   ┌───────────────┐
+   │   Refactor    │
+   │   code/tests  │
+   │   → keep PASS │
+   └───────┬───────┘
+           │
+           ▼
+        Repeat cycle
+
+
+---
+
+### ✅ How This Helps
+- **Red** → Forces you to define expected behavior before writing code.  
+- **Green** → Ensures the implementation meets the test requirements.  
+- **Refactor** → Keeps the code clean and maintainable while preserving correctness.  
+
+---
