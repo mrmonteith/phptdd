@@ -1,5 +1,5 @@
 # phptdd
-# PHP test-driven development example
+# PHP Test-Driven Development example
 
 This repository demonstrates Test-Driven Development (TDD) in PHP using PHPUnit. It’s designed to be recruiter-friendly, transparent, and easy to reproduce.
 
