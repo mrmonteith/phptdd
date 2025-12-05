@@ -36,3 +36,34 @@ public function testApplyDiscountReducesPrice(): void
 
     $this->assertEqualsWithDelta(90.0, $result, 0.0001);
 }
+```
+
+➡️ Fails because DiscountCalculator doesn’t exist yet.
+## Step 2: Write minimal code
+
+```php
+namespace Mmonteith\PhpTddExample;
+
+class DiscountCalculator
+{
+    public function applyDiscount(float $price, float $percent): float
+    {
+        return $price - ($price * $percent / 100);
+    }
+}
+```
+➡️ Test passes.
+
+## Step 3: Refactor
+
+Add input validation, improve readability, or restructure without breaking tests.
+# 📌 Summary
+
+TDD is not just about testing — it’s about designing software through tests. By following the Red‑Green‑Refactor cycle, developers build reliable, maintainable codebases with confidence.
+# 📚 References
+
+    Agile Alliance – What is TDD?
+
+    Wikipedia – Test-Driven Development
+
+    GeeksforGeeks – Test-Driven Development
