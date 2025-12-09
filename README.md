@@ -34,10 +34,6 @@ phptdd/
 ```
 
 ---
-# PHP Test-Driven Development Example
-
-This repository demonstrates Test-Driven Development (TDD) in PHP using PHPUnit.
-
 
 ## Steps
 1. Write a failing test in `tests/`.
